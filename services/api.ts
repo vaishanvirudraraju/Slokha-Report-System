@@ -137,7 +137,7 @@ export async function fetchStudentResult(
   studentId: string,
   examType: string,
 ): Promise<StudentResult> {
-  const base = "http://localhost:3000";
+  const base = "https://slokha-report-card.vercel.app";
   const path = `/results/${encodeURIComponent(studentId)}`;
   const query = new URLSearchParams({ examType }).toString();
   const url = `${base}${path}?${query}`;
