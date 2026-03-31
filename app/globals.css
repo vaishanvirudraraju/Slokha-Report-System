@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --color-sloka-yellow: #f9c200;
+  --color-sloka-teal: #004d40;
+  --color-sloka-maroon: #9d1b1f;
+  --color-sloka-cream: #faf8f3;
+  --color-slate-ink: #1a1a1a;
+  --color-slate-muted: #5c5c5c;
+}
+
+body {
+  @apply min-h-screen antialiased text-slate-ink;
+  background: linear-gradient(180deg, var(--color-sloka-cream) 0%, #f3f0e8 55%, #ebe6db 100%);
+}
