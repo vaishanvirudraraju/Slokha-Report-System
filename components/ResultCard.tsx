@@ -68,7 +68,7 @@ export function ResultCard({ result, studentId, examType }: ResultCardProps) {
               <tr>
                 <th className="px-4 py-3 sm:px-5">Subject</th>
                 <th className="px-4 py-3 text-right sm:px-5">Marks</th>
-                <th className="px-4 py-3 text-right sm:px-5">Grade</th>
+                {/* <th className="px-4 py-3 text-right sm:px-5">Grade</th> */}
               </tr>
             </thead>
             <tbody className="divide-y divide-neutral-100">
@@ -93,9 +93,9 @@ export function ResultCard({ result, studentId, examType }: ResultCardProps) {
                     <td className="px-4 py-3 text-right tabular-nums font-medium text-neutral-900 sm:px-5">
                       {formatMark(subject)}
                     </td>
-                    <td className="px-4 py-3 text-right tabular-nums font-medium text-neutral-900 sm:px-5">
+                    {/* <td className="px-4 py-3 text-right tabular-nums font-medium text-neutral-900 sm:px-5">
                       {result.grade}
-                    </td>
+                    </td> */}
                   </tr>
                 ))
               )}
