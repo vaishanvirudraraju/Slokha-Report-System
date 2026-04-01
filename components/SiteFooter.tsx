@@ -4,7 +4,7 @@ export function SiteFooter() {
   return (
     <footer
       id="contact"
-      className="mt-auto border-t border-neutral-200 bg-[#004d40] text-white"
+      className="mt-auto border-t border-neutral-200 bg-[#004d40] pb-[env(safe-area-inset-bottom)] text-white"
     >
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 sm:py-14 lg:grid-cols-3 lg:px-8">
         <div>

@@ -59,7 +59,7 @@ export function SiteHeader() {
   const [branchesOpen, setBranchesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-[100]">
+    <header className="sticky top-0 z-[100] pt-[env(safe-area-inset-top)]">
       <div className="flex min-h-[40px] flex-col sm:flex-row">
         <div className="flex flex-1 items-center gap-3 bg-[#f9c200] px-4 py-2 sm:px-6">
           <span className="text-sm font-semibold text-[#004d40]">Follow Us:</span>
