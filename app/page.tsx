@@ -18,7 +18,7 @@ export default function HomePage() {
             results portal to view your child&apos;s performance across formative
             and summative assessments.
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
             <Link
               href="/results"
               className="inline-flex w-full min-w-[200px] items-center justify-center rounded-full bg-[#f9c200] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-[#004d40] shadow-[0_4px_14px_rgba(249,194,0,0.45)] transition hover:bg-[#e6b000] sm:w-auto"
@@ -26,8 +26,14 @@ export default function HomePage() {
               View student result
             </Link>
             <Link
-              href="/#contact"
+              href="/student/login"
               className="inline-flex w-full min-w-[200px] items-center justify-center rounded-full border-2 border-[#004d40] bg-white px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-[#004d40] transition hover:bg-[#004d40]/5 sm:w-auto"
+            >
+              Student quizzes
+            </Link>
+            <Link
+              href="/#contact"
+              className="inline-flex w-full min-w-[200px] items-center justify-center rounded-full border-2 border-neutral-300 bg-white px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-neutral-800 transition hover:bg-neutral-50 sm:w-auto"
             >
               Contact us
             </Link>

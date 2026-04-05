@@ -34,14 +34,17 @@ function NavLink({
   href,
   children,
   active,
+  onClick,
 }: {
   href: string;
   children: React.ReactNode;
   active?: boolean;
+  onClick?: () => void;
 }) {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={`rounded-lg px-3 py-2 text-sm font-semibold transition ${
         active
           ? "bg-[#004d40]/10 text-[#004d40]"
@@ -186,6 +189,15 @@ export function SiteHeader() {
             <NavLink href="/#contact" active={false}>
               Contact us
             </NavLink>
+            <NavLink
+              href="/student/login"
+              active={pathname.startsWith("/student")}
+            >
+              Quiz portal
+            </NavLink>
+            <NavLink href="/teacher/login" active={pathname === "/teacher/login"}>
+              Staff
+            </NavLink>
             <Link
               href="/results"
               className={`ml-1 rounded-full px-5 py-2.5 text-sm font-bold tracking-wide transition ${
@@ -263,6 +275,18 @@ export function SiteHeader() {
                 </a>
               ))}
               <NavLink href="/#contact">Contact us</NavLink>
+              <NavLink
+                href="/student/login"
+                onClick={() => setMobileOpen(false)}
+              >
+                Quiz portal
+              </NavLink>
+              <NavLink
+                href="/teacher/login"
+                onClick={() => setMobileOpen(false)}
+              >
+                Staff
+              </NavLink>
               <Link
                 href="/results"
                 className="mt-2 rounded-full bg-[#f9c200] py-3 text-center text-sm font-bold text-[#004d40]"

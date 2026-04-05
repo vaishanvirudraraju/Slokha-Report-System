@@ -1,3 +1,5 @@
+import { getApiBase } from "@/lib/api-base";
+
 export const ExamType = {
   FORMATIVE_1: "FORMATIVE_1",
   FORMATIVE_2: "FORMATIVE_2",
@@ -137,8 +139,8 @@ export async function fetchStudentResult(
   studentId: string,
   examType: string,
 ): Promise<StudentResult> {
-  const base = "https://sloka-backend.vercel.app";
-  const path = `/results/${encodeURIComponent(studentId)}`;
+  const base = getApiBase();
+  const path = `results/${encodeURIComponent(studentId)}`;
   const query = new URLSearchParams({ examType }).toString();
   const url = `${base}${path}?${query}`;
 
